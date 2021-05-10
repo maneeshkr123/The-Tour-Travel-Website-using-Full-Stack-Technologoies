@@ -4,6 +4,16 @@ import './Footer.css'
 import { Link } from "react-router-dom";
 
 function Footer() {
+
+    var subscribers = JSON.parse(localStorage.getItem('subscribers'));
+    function onSubmit(){
+      var mail = document.getElementById('subemail');
+      if (subscribers == null)
+            subscribers = []
+      subscribers.push(mail.value)
+      localStorage.setItem('subscribers', JSON.stringify(subscribers))
+    }
+
     return (
         <div className='footer-container'>
             <section className="footer-subscription">
@@ -15,8 +25,8 @@ function Footer() {
                 </p>
                 <div className="input-areas">
                     <form>
-                        <input type="email" name="email" placeholder="Your Email"  className="footer-input"/>
-                        <Button buttonStyle='btn--outline'>Subscribe</Button>
+                        <input type="email" name="email" id="subemail" placeholder="Your Email"  className="footer-input"/>
+                        <Button onClick={onSubmit} buttonStyle='btn--outline'>Subscribe</Button>
                     </form>
                 </div>
             </section>

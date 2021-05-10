@@ -1,0 +1,13 @@
+.terms{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.terms > p{
+    text-align: justify;
+
+}
+
+h1{
+    margin-top: 50px;
+}

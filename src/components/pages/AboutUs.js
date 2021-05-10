@@ -1,14 +1,14 @@
 import React from 'react'
 import '../../App.css'
+import About from '../About'
 import Footer from '../Footer'
-import Gallery from '../Gallery'
 
-function Products() {
+function AboutUs() {
     return (
         <>
-        <Gallery/>
+        <About />
         </>
     )
 }
 
-export default Products
+export default AboutUs
